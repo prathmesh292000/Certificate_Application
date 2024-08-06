@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' http://localhost:3000; script-src 'self' http://localhost:3000; style-src 'self'; connect-src 'self' http://localhost:3000;">
+    <title>Certificate of Appreciation </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- Include html2canvas library -->
+<script src="scripts.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="Hidden">Certificate of Appreciation </h1>
+        <form id="certificateForm">
+            <label for="donorName">Donor's Name:</label>
+            <input type="text" id="donorName" name="donorName" required>
+            
+            <label for="donationAmount">Donation Amount:</label>
+            <input type="number" id="donationAmount" name="donationAmount" required>
+            
+            <label for="donationDate">Date of Donation:</label>
+            <input type="date" id="donationDate" name="donationDate" required>
+            
+            <label for="issueDate">Date of Certificate Issuance:</label>
+            <input type="date" id="issueDate" name="issueDate" required>
+            
+            <button type="submit">Generate Certificate</button>
+            <button type="button" id="resetButton">Reset Form</button>
+            <button type="button" id="sendEmailButton">Send via Email</button>
+        </form>
+        
+        <div id="certificate" class="certificate hidden">
+            <h2>Certificate of Appreciation</h2>
+            <p>This certifies that <span id="certDonorName"></span> has generously contributed to Sadashanti Balgruh/Adhargruh, Amravati with a donation of <span id="certDonationAmount"></span> on <span id="certDonationDate"></span>.</p>
+            <p>Your support plays a crucial role in our mission. We are immensely grateful for your commitment and generosity.</p>
+            <p>Sadashanti Balgruh/Adhargruh, Amravati expresses its deepest gratitude to <span id="certDonorName2"></span> for their invaluable contribution towards our cause.</p>
+            <p>Date: <span id="certIssueDate"></span></p>
+            <div class="signatures">
+                <div>
+                    <img src="path/to/signature1.png" alt="Signature Dr. Sudam P. Ingle">
+                    <p>President: Dr. Sudam P. Ingle</p>
+                </div>
+                <div>
+                    <img src="path/to/signature2.png" alt="Signature Mrs. Kumudini Ingle">
+                    <p>Coordinator: Mrs. Kumudini Ingle</p>
+                </div>
+                <div>
+                    <img src="path/to/signature3.png" alt="Signature Dr. Pankaja Ingle">
+                    <p>Secretary: Dr. Pankaja Ingle</p>
+                </div>
+                <div>
+                    <img src="path/to/signature4.png" alt="Signature Dr. Sandhya Bhagat">
+                    <p>Director: Dr. Sandhya Bhagat</p>
+                </div>
+            </div>
+            <!-- <button id="printButton">Print Certificate</button> -->
+        </div>
+        
+        <button id="printButton">Print Certificate</button>
+        <button id="downloadButton">Download Certificate</button>
+        </div>
+        
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
