@@ -19,15 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Download button functionality using html2canvas
-    downloadButton.addEventListener('click', () => {
-        html2canvas(certificate).then(canvas => {
-            const link = document.createElement('a');
-            link.download = 'certificate.png';
-            link.href = canvas.toDataURL();
-            link.click();
+
+    document.getElementById('downloadButton').addEventListener('click', function () {
+        html2canvas(document.querySelector('#certificate')).then(function (canvas) {
+            var imgData = canvas.toDataURL('image/png');
+            var pdf = new jsPDF();
+            pdf.addImage(imgData, 'PNG', 0, 0);
+            pdf.save("certificate.pdf");
         });
     });
 
+    
     // Function to set certificate values
     function setCertificateValues(donorName, donationAmount, donationDate, issueDate) {
         certDonorName.textContent = donorName;
@@ -78,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const templateParams = {
             to_email: 'recipient@example.com',
-            from_name: 'Your Name',
+            from_name: 'Prathmeshkathe2000@gmail.com',
             message_html: 'Message content'
         };
 
