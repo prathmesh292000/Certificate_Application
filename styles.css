@@ -136,6 +136,7 @@ button {
 
 #certIssueDate, #certDonorName, #certDonationAmount, #certDonationDate, #certDonorName2 {
     font-weight: bold;
+     color: #c80808;
 }
 
 .hidden {
