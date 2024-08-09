@@ -105,6 +105,7 @@ button {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: #c80808;
 }
 
 .certificate p {
@@ -120,13 +121,17 @@ button {
     margin-top: 30px;
 }
 
+.signatures p{
+    color: #c80808;
+}
+
 .signatures div {
     text-align: center;
 }
 
 .signatures img {
-    width: 150px;
-    height: auto;
+    width: 120px;
+    height: 120px;
 }
 
 #certIssueDate, #certDonorName, #certDonationAmount, #certDonationDate, #certDonorName2 {
@@ -154,14 +159,13 @@ button {
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
+        width: 99%;
         height: auto; /* Adjusts height automatically to fit the content */
-        border: none;
+/*         border: none; */
         padding: 0;
         margin: 0;
         background: none; /* Removes background color */
         margin-top: 50px;
-       
     }
 
     /* Hides elements with the 'Hidden' class */
